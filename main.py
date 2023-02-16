@@ -2,7 +2,7 @@ import openai
 import os
 from flask import Flask, request, jsonify
 
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 class Bot:
     def __init__(self, prompt) -> None:
